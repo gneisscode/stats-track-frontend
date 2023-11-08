@@ -23,7 +23,7 @@ const SignIn = () => {
       </div>
 
       <p className="mt-4 mb-8">
-        Don't have an account?{" "}
+        Don&apos;t have an account?
         <Link href={"/auth/sign-up"} className=" text-text-red-primary">
           Sign Up
         </Link>
