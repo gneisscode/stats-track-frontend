@@ -25,7 +25,12 @@ const SignUp = () => {
         </Button>
       </div>
 
-      <p className="mt-4 mb-8">Already have an account? <Link href={"/auth/sign-in"} className=" text-text-red-primary">Sign In</Link></p>
+      <p className="mt-4 mb-8">
+        Already have an account?&nbsp;
+        <Link href={"/auth/sign-in"} className=" text-text-red-primary">
+          Sign In
+        </Link>
+      </p>
     </AuthLayout>
   );
 };

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { AuthLayout } from "@/components/layouts";
 import { Button, Input } from "@nextui-org/react";
 import Link from "next/link";
@@ -23,13 +23,13 @@ const SignIn = () => {
       </div>
 
       <p className="mt-4 mb-8">
-        Don&apos;t have an account?
+        Don&apos;t have an account?&nbsp;
         <Link href={"/auth/sign-up"} className=" text-text-red-primary">
           Sign Up
         </Link>
       </p>
     </AuthLayout>
   );
-}
+};
 
-export default SignIn
+export default SignIn;

@@ -11,13 +11,13 @@ const AuthLayout = ({ heading, children}: TCard) => {
   return (
     <div className="flex flex-col justify-center items-center gap-8 mt-10 mb-8">
       <Link href="/">
-        <h1 className="hero-text font-Khorla text-heading-blue-primary text-[48px]">
+        <h1 className="hero-text text-heading-blue-primary text-[48px]">
           StatsTrack
         </h1>
       </Link>
       <Card className="w-[90%] md:w-[500px] h-fit">
-        <CardHeader className="flex justify-center mt-4 font-Khorla text-heading-blue-primary text-2xl">
-          {heading}
+        <CardHeader className="flex justify-center mt-4 text-heading-blue-primary text-2xl">
+          <h1> {heading}</h1>
         </CardHeader>
         <CardBody className="flex items-center">{children}</CardBody>
       </Card>

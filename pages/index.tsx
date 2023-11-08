@@ -14,7 +14,7 @@ export default function Home() {
     <main className="w-[100%] min-h-[100vh] flex flex-col bg-background-light items-center pt-4">
       <Navbar>
         <NavbarBrand>
-          <h1 className="font-Khorla text-heading-blue-primary text-4xl">
+          <h1 className=" text-heading-blue-primary text-2xl md:text-4xl">
             StatsTrack
           </h1>
         </NavbarBrand>
@@ -76,8 +76,8 @@ export default function Home() {
 
       <div className="relative flex flex-col justify-center items-center mt-[55px]  md:mt-[84px] p-4 w-[90%] md:w-[70%]">
         <div className="hero-bg"></div>
-        <div className="absolute z-10 md:top-0 top-[50px] flex flex-col gap-4 justify-center items-center">
-          <h1 className="text-center font-Khorla text-[32px] md:text-[82px] text-text-black">
+        <div className="absolute z-10 md:top-[50px] top-[50px] flex flex-col gap-4 justify-center items-center">
+          <h1 className="text-center text-[32px] md:text-[82px] text-text-black">
             <span className="hero-text">Elevate</span> How You Track Your Stats
             📈
           </h1>

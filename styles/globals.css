@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500&family=Cabin:wght@400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,6 +15,11 @@ p,
 .btn {
   /* font-family: 'Cabin Condensed', sans-serif; */
   font-family: "Cabin", sans-serif;
+}
+
+h1{
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
 }
 
 body {
