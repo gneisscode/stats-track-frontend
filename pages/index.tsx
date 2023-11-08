@@ -7,13 +7,14 @@ import {
   Button,
   Chip,
 } from "@nextui-org/react";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="w-[100%] min-h-[100vh] flex flex-col bg-background-light items-center pt-4">
       <Navbar>
         <NavbarBrand>
-          <h1 className="font-Khorla text-heading-blue-primary text-2xl">
+          <h1 className="font-Khorla text-heading-blue-primary text-4xl">
             StatsTrack
           </h1>
         </NavbarBrand>
@@ -34,23 +35,27 @@ export default function Home() {
 
         <NavbarContent>
           <NavbarItem>
-            <div className="flex gap-4 btn">
-              <Button
-                className=" text-heading-blue-primary bg-background-light border-heading-blue-primary font-medium"
-                href="#"
-                variant="bordered"
-                radius="full"
-              >
-                Sign Up
-              </Button>
-              <Button
-                className="bg-heading-blue-primary text-background-light font-medium"
-                href="#"
-                variant="flat"
-                radius="full"
-              >
-                Sign In
-              </Button>
+            <div className="flex gap-4 md:gap-8 btn">
+              <Link href="/auth/sign-up">
+                <Button
+                  className=" text-heading-blue-primary bg-background-light border-heading-blue-primary font-medium"
+                  href="/auth/sign-up"
+                  variant="bordered"
+                  radius="full"
+                >
+                  Sign Up
+                </Button>
+              </Link>
+              <Link href="/auth/sign-in">
+                <Button
+                  className="bg-heading-blue-primary text-background-light font-medium"
+                  href="/auth/sign-in"
+                  variant="flat"
+                  radius="full"
+                >
+                  Sign In
+                </Button>
+              </Link>
             </div>
           </NavbarItem>
         </NavbarContent>
@@ -69,9 +74,9 @@ export default function Home() {
         </Chip>
       </div>
 
-      <div className="flex flex-col justify-center items-center mt-[55px]  md:mt-[84px] p-4 w-[90%] md:w-[70%]">
+      <div className="relative flex flex-col justify-center items-center mt-[55px]  md:mt-[84px] p-4 w-[90%] md:w-[70%]">
         <div className="hero-bg"></div>
-        <div className="flex flex-col gap-4 justify-center items-center">
+        <div className="absolute z-10 md:top-0 top-[50px] flex flex-col gap-4 justify-center items-center">
           <h1 className="text-center font-Khorla text-[32px] md:text-[82px] text-text-black">
             <span className="hero-text">Elevate</span> How You Track Your Stats
             📈
