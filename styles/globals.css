@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500&family=Cabin:wght@400;500&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,8 +17,8 @@ p,
   font-family: "Cabin", sans-serif;
 }
 
-h1{
-  font-family: 'Lato', sans-serif;
+h1 {
+  font-family: "Lato", sans-serif;
   font-weight: 700;
 }
 
@@ -29,7 +29,7 @@ body {
 
 .hero-text {
   background: #094067;
-  background: linear-gradient(to right, #094067 0%,  #ef4565 100%);
+  background: linear-gradient(to right, #094067 0%, #ef4565 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -46,11 +46,20 @@ background: radial-gradient(circle, rgba(143,179,255,1) 15%, rgba(255,255,254,1)
 
   background-image: linear-gradient(
     -45deg,
-     rgba(143, 179, 255, 0.9),
+    rgba(143, 179, 255, 0.9),
     rgba(143, 179, 255, 0.9) 40%,
     rgba(143, 179, 255, 0.9) 45%,
     rgba(143, 179, 255, 0.9) 60%,
     rgba(143, 179, 255, 0.9)
   );
   filter: blur(45px);
+}
+
+@media screen and (min-width: 720px) {
+  .hero-bg {
+    width: 672px;
+    height: 472px;
+  }
+
+  
 }
