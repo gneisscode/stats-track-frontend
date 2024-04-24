@@ -12,13 +12,18 @@ export const axiosWithoutToken = axios.create({
 });
 
 export const axiosWithToken = () => {
-  const { user } = useContext(Context);
+  let user
+  if (process.browser){
+    user = JSON.parse(localStorage.getItem("user") as any) || null;
+    return axios.create({
+      baseURL,
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${user?.token}`,
+      },
+    });
 
-  return axios.create({
-    baseURL,
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${user?.token}`,
-    },
-  });
+  }
+
+  
 };

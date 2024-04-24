@@ -23,6 +23,7 @@ const config: Config = {
         "blue-secondary": "#EBF1FF",
         "text-blue-primary": "#5f6c7b",
         "text-black": "#353535",
+        // "heading-blue-primary": "#3B3E79",
         "heading-blue-primary": "#094067",
         "text-red-primary": "#ef4565",
       },

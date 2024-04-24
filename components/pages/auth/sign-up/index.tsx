@@ -66,7 +66,7 @@ const SignUp = () => {
      } catch (error: any) {
        console.log(error);
        dispatch({ type: "LOGIN_FAILURE" });
-       throw new Error(error?.response?.data?.message || "An error occurred");
+      //  throw new Error(error?.response?.data?.message || "An error occurred");
      }
    };
 
@@ -99,13 +99,11 @@ const SignUp = () => {
               label="First Name"
               labelPlacement="inside"
               isInvalid={errors.firstName ? true : false}
+              errorMessage={errors.firstName?.message}
               variant="bordered"
             />
           )}
         />
-        {errors.firstName && (
-          <p className="text-red-500">{errors.firstName?.message}</p>
-        )}
 
         <Controller
           name="lastName"
@@ -118,13 +116,12 @@ const SignUp = () => {
               label="Last Name"
               labelPlacement="inside"
               isInvalid={errors.lastName ? true : false}
+              errorMessage={errors.lastName?.message}
               variant="bordered"
             />
           )}
         />
-        {errors.lastName && (
-          <p className="text-red-500">{errors.lastName?.message}</p>
-        )}
+
         <Controller
           name="email"
           control={control}
@@ -136,13 +133,12 @@ const SignUp = () => {
               label="Email"
               labelPlacement="inside"
               isInvalid={errors.email ? true : false}
+              errorMessage={errors.email?.message}
               variant="bordered"
             />
           )}
         />
-        {errors.email && (
-          <p className="text-red-500">{errors.email?.message}</p>
-        )}
+
         <Controller
           name="username"
           control={control}
@@ -154,13 +150,11 @@ const SignUp = () => {
               label="Username"
               labelPlacement="inside"
               isInvalid={errors.username ? true : false}
+              errorMessage={errors.username?.message}
               variant="bordered"
             />
           )}
         />
-        {errors.username && (
-          <p className="text-red-500">{errors.username?.message}</p>
-        )}
 
         <Controller
           name="password"
@@ -173,13 +167,11 @@ const SignUp = () => {
               label="Password"
               labelPlacement="inside"
               isInvalid={errors.password ? true : false}
+              errorMessage={errors.password?.message}
               variant="bordered"
             />
           )}
         />
-        {errors.password && (
-          <p className="text-red-500">{errors.password?.message}</p>
-        )}
 
         <Controller
           name="confirmPassword"
@@ -192,13 +184,11 @@ const SignUp = () => {
               label="ConfirmPassword"
               labelPlacement="inside"
               isInvalid={errors.confirmPassword ? true : false}
+              errorMessage={errors.confirmPassword?.message}
               variant="bordered"
             />
           )}
         />
-        {errors.confirmPassword && (
-          <p className="text-red-500">{errors.confirmPassword?.message}</p>
-        )}
 
         <div className="self-center mb-2">
           <Button

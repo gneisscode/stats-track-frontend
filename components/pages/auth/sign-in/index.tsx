@@ -50,7 +50,7 @@ const SignIn = () => {
     } catch (error: any) {
       console.log(error);
       dispatch({ type: "LOGIN_FAILURE" });
-      throw new Error(error?.response?.data?.message || "An error occurred");
+      // throw new Error(error?.response?.data?.message || "An error occurred");
     }
   };
 
@@ -84,13 +84,11 @@ const SignIn = () => {
                 label="Email"
                 labelPlacement="inside"
                 isInvalid={errors.email ? true : false}
+                errorMessage={errors.email?.message}
                 variant="bordered"
               />
             )}
           />
-          {errors.email && (
-            <p className="text-red-500">{errors.email?.message}</p>
-          )}
 
           <Controller
             name="password"
@@ -104,12 +102,10 @@ const SignIn = () => {
                 labelPlacement="inside"
                 isInvalid={errors.password ? true : false}
                 variant="bordered"
+                errorMessage={errors.password?.message}
               />
             )}
           />
-          {errors.password && (
-            <p className="text-red-500">{errors.password?.message}</p>
-          )}
         </div>
 
         <div className="mb-2">
